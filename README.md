@@ -55,7 +55,7 @@ Feel free to explore the different sections of the website. You can navigate thr
 
 ## Live Demo
 
-Check out the live version of my portfolio [here](#).
+Check out the live version of my portfolio [here](https://akshatawasthi.vercel.app/).
 
 ## Contributing
 
