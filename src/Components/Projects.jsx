@@ -4,10 +4,10 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Projects = () => {
     const project = [
-        { name: 'My-Hostel', image:"public/My-hostel.png",href:"",gitHub:"https://github.com/Akshat-Awasthi/My-Hostel", description:"Developed an advanced hostel management system, integrating machine learning features for mess operations, attendance tracking via facial recognition, complaint registration, online leave applications, and feedback collection.", Tech: ["React", "TailwindCSS", "Machine Learning"] },
-        { name: 'Sync Hub', image:"public/syncHub.png",href:"",gitHub:"https://github.com/Akshat-Awasthi/Sync-Hub", description:"Developed a real-time collaborative coding platform designed for remote teamwork and pair programming.", Tech: ["React", "Socket.IO"] },
-        { name: 'PyCloudOps', image:"public/pyCloudOps.png",href:"",gitHub:"https://github.com/Akshat-Awasthi/PyCloudOps", description:"Created a monitoring application in Python using Flask and Psutil", Tech: ["Python", "AWS", "Docker", "Kubernetes"] },
-        { name: 'Health Tracking Mobile', image:"../public/Health-Tracking.png",gitHub:"https://github.com/Akshat-Awasthi/HealthTracking-MobileWebApp",href:"https://health-tracking-mobile-web-app.vercel.app/", description:"Developed a responsive mobile website for tracking fitness activities, diet, and health metrics, featuring real-time data visualization and personalized health insights.",Tech:["React","TailwindCSS"] },
+        { name: 'My-Hostel', image:"/My-hostel.png",href:"",gitHub:"https://github.com/Akshat-Awasthi/My-Hostel", description:"Developed an advanced hostel management system, integrating machine learning features for mess operations, attendance tracking via facial recognition, complaint registration, online leave applications, and feedback collection.", Tech: ["React", "TailwindCSS", "Machine Learning"] },
+        { name: 'Sync Hub', image:"/syncHub.png",href:"",gitHub:"https://github.com/Akshat-Awasthi/Sync-Hub", description:"Developed a real-time collaborative coding platform designed for remote teamwork and pair programming.", Tech: ["React", "Socket.IO"] },
+        { name: 'PyCloudOps', image:"/pyCloudOps.png",href:"",gitHub:"https://github.com/Akshat-Awasthi/PyCloudOps", description:"Created a monitoring application in Python using Flask and Psutil", Tech: ["Python", "AWS", "Docker", "Kubernetes"] },
+        { name: 'Health Tracking Mobile', image:"/Health-Tracking.png",gitHub:"https://github.com/Akshat-Awasthi/HealthTracking-MobileWebApp",href:"https://health-tracking-mobile-web-app.vercel.app/", description:"Developed a responsive mobile website for tracking fitness activities, diet, and health metrics, featuring real-time data visualization and personalized health insights.",Tech:["React","TailwindCSS"] },
     ];
 
     return (
