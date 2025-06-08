@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa";
+import Sphere from './EyeMod';
 
 
 const Projects = () => {
@@ -39,6 +41,9 @@ const Projects = () => {
                     ))
                 }
             </div>
+            {/* <div>
+                <Sphere />
+            </div> */}
         </div>
     );
 };

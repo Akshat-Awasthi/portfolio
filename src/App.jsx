@@ -5,6 +5,40 @@ import Layout from "./Components/Shared/Layout"
 
 function App() {
 
+  React.useLayoutEffect(() => {
+    // 1. Load the widget script if not already present
+    if (!document.getElementById("tailortalk-widget-script")) {
+      const script = document.createElement("script");
+      script.id = "tailortalk-widget-script";
+      script.src="http://localhost:3001/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        window.TailorTalk && window.TailorTalk.init({
+          agentId: "test_QC_hello",         // <-- Replace with your agent ID
+        agentName: "Akshat Awasthi",     // <-- Replace with your agent name
+          position: { bottom: "20px", right: "20px" }, // or { bottom: "20px", left: "20px" }
+          theme: "light",                   // or "dark", "default", "minimal"
+        });
+      };
+    } else {
+      // If script is already loaded, just initialize
+      window.TailorTalk && window.TailorTalk.init({
+        agentId: "test_QC_hello",         // <-- Replace with your agent ID
+        agentName: "Akshat Awasthi",     // <-- Replace with your agent name
+        position: { bottom: "20px", right: "20px" }, // or { bottom: "20px", left: "20px" }
+        theme: "light",                   // or "dark", "default", "minimal"
+      });
+    }
+
+    // Cleanup: remove widget on unmount
+    return () => {
+      const container = document.querySelector(".tt-widget-container");
+      if (container) container.remove();
+    };
+  }, []);
+
   return (
     <Router>
       <Routes>
