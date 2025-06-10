@@ -22,6 +22,9 @@ function App() {
           theme: "light",                   // or "dark", "default", "minimal"
         });
       };
+      script.onerror = () => {
+        console.error("Failed to load TailorTalk script");
+      };
     }
 
     // Cleanup: remove widget on unmount
