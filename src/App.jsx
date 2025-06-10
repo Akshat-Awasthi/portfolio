@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { BrowserRouter as Router , Routes , Route } from "react-router-dom"
 import MainPage from "./Components/MainPage"
 import Layout from "./Components/Shared/Layout"
@@ -10,7 +10,7 @@ function App() {
     if (!document.getElementById("tailortalk-widget-script")) {
       const script = document.createElement("script");
       script.id = "tailortalk-widget-script";
-      script.src="http://localhost:3001/widget.js";
+      script.src="https://frontend-967663674421.us-central1.run.app/widget.js";
       script.async = true;
       document.body.appendChild(script);
 
@@ -22,14 +22,6 @@ function App() {
           theme: "light",                   // or "dark", "default", "minimal"
         });
       };
-    } else {
-      // If script is already loaded, just initialize
-      window.TailorTalk && window.TailorTalk.init({
-        agentId: "test_QC_hello",         // <-- Replace with your agent ID
-        agentName: "Akshat Awasthi",     // <-- Replace with your agent name
-        position: { bottom: "20px", right: "20px" }, // or { bottom: "20px", left: "20px" }
-        theme: "light",                   // or "dark", "default", "minimal"
-      });
     }
 
     // Cleanup: remove widget on unmount
