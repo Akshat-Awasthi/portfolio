@@ -10,7 +10,7 @@ function App() {
     if (!document.getElementById("tailortalk-widget-script")) {
       const script = document.createElement("script");
       script.id = "tailortalk-widget-script";
-      script.src="https://frontend-967663674421.us-central1.run.app/widget.js";
+      script.src="https://plugins.tailortalk.ai/widget.js";
       script.async = true;
       document.body.appendChild(script);
 
@@ -18,8 +18,8 @@ function App() {
         window.TailorTalk && window.TailorTalk.init({
           agentId: "test_QC_hello",         // <-- Replace with your agent ID
         agentName: "Akshat Awasthi",     // <-- Replace with your agent name
-          position: { bottom: "20px", right: "20px" }, // or { bottom: "20px", left: "20px" }
-          theme: "light",                   // or "dark", "default", "minimal"
+          position: { bottom: "20px", left: "20px" }, // or { bottom: "20px", left: "20px" }
+          theme: "default",                   // or "dark", "default", "minimal"
         });
       };
       script.onerror = () => {
